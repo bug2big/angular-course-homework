@@ -1,0 +1,4 @@
+<button class="custom-button" type="{{ type }}" *ngIf="!iconName">
+    {{ title }}
+</button>
+<fa-icon class="custom-button-icon" [icon]="['fas', iconName]" *ngIf="iconName"></fa-icon>

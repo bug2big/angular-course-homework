@@ -1,0 +1,20 @@
+#courseCard {
+    border: solid 1px #32a852;
+    .row {
+        margin: 10px;
+        .label{
+            display: inline-block;
+            font-weight: bold;
+        }
+        .text {
+            display: inline-block;
+        }
+    }
+
+    .row.actions {
+        app-button{
+            width: auto;
+            max-width: fit-content;   
+        }
+    }
+}

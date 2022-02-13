@@ -1,0 +1,28 @@
+<div id="courseCard">
+    <div class="row">
+        <div class="col col-md-7">
+            <div class="row label">{{ courseCard.title }}</div>
+            <div class="row">{{ courseCard.description }}</div>
+        </div>
+        <div class="col col-md-5">
+            <div class="row">
+                <div class="col-3 label">Authors:</div>
+                <div class="col-9 text">{{ courseCard.authors }}</div>
+            </div>
+            <div class="row">
+                <div class="col-3 label">Duration:</div>
+                <div class="col-9 text">{{ durationFormat(courseCard.duration) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-3 label">Created:</div>
+                <div class="col-9 text">{{ dateformat(courseCard.creationDate) }}</div>
+            </div>
+            <div class="row actions">
+                <app-button [title]="'Show course'" [type]="'button'"></app-button>
+
+                <app-button [iconName]="'edit'" *ngIf="showExtraAction()"></app-button>
+                <app-button [iconName]="'trash-can'" *ngIf="showExtraAction()"></app-button>
+            </div>
+        </div>
+    </div>
+</div>
